@@ -5,7 +5,8 @@ export const COLUMNS = [
 	{
 		Header : 'ID',
 		accessor : '_id',
-		sticky : 'left' 
+		sticky : 'left' ,
+		width : 160
 	},
 	{
 		Header : 'Name',
