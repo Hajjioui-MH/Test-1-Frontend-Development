@@ -3,14 +3,18 @@ import Scroll from '../Scroll'
 
 export const COLUMNS = [
 	{
-		Header : 'PID',
-		accessor : 'pid',
+		Header : 'ID',
+		accessor : '_id',
 		sticky : 'left' 
 	},
 	{
 		Header : 'Name',
 		accessor : 'name',
 		sticky : 'left'
+	},
+	{
+		Header : 'Description',
+		accessor : data => data.description.length > 300 ? <Scroll> {data.description} </Scroll> : data.description
 	},
 	{
 		Header : 'Category',
@@ -21,8 +25,28 @@ export const COLUMNS = [
 		accessor : 'subcategory'
 	},
 	{
-		Header : 'Description',
-		accessor : data => data.description.length > 300 ? <Scroll> {data.description} </Scroll> : data.description
+		Header : 'PID',
+		accessor : 'pid',
+	},
+	{
+		Header : '__V',
+		accessor : '__v',
+	},
+	{
+		Header : 'ModelId',
+		accessor : 'modelId',
+	},
+	{
+		Header : 'Datasheet',
+		accessor : data => <a href={data.datasheet} > datasheet link </a>,
+	},
+	{
+		Header : 'Link',
+		accessor : data => <a href={data.link} > link </a>,
+	},
+	{
+		Header : 'Thumbnail',
+		accessor : data => <a href={data.thumbnail} > thumbnail link </a>,
 	},
 	{
 		Header : 'CreatedAt',

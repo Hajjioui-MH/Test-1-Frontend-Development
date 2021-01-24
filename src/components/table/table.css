@@ -24,6 +24,15 @@
   background-color: #4CAF50;
   color: white;
 }
+a {
+  background-color: green;
+  color: white;
+  padding: 4px;
+  margin:  6px 0px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
 
 /*====== specifications table =====================================*/
 .table_2{width: 100%}
