@@ -11,7 +11,7 @@ const App = ()=> {
   const [value, setValue] = useState(null)
 
   useEffect(() => {
-    fetch('http://app.getrecall.com:8080/products')
+    fetch('https://app.getrecall.com/api/products')//https://app.getrecall.com/api/products
       .then(response=>response.json())
       .then( data=> {
             setData( value == null ? data.products : data.products.filter(product=> product.category === value))
